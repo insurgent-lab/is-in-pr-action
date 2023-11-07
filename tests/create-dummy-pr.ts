@@ -7,7 +7,7 @@ interface Options {
 
 export default function createDummyPR(id: number, options: Options): PR {
   return {
-    id,
+    number: id,
     draft: options.draft ?? false,
     head: {
       sha: options.sha ?? ''
