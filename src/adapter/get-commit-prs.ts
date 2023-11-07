@@ -1,9 +1,9 @@
-import * as github from '@actions/github'
 import * as core from '@actions/core'
+import * as github from '@actions/github'
 import {GitHub} from '@actions/github/lib/utils'
 import {PR} from '../types/pull-request'
 
-export default async function getPullRequestsAssociatedWithCommits(
+export default async function getCommitPRs(
   octokit: InstanceType<typeof GitHub>,
   sha: string
 ): Promise<PR[]> {

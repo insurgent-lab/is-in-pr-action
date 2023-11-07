@@ -1,45 +1,37 @@
-name: 'build'
+name: Build
 
-on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
-  build: # make sure build/ci work properly
+  build:
     runs-on: ubuntu-latest
+
+    # Deprecated workflow until semantic-release is setup
+    if: ${{ false }}
+
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        if: steps.check.outputs.triggered == 'true'
         with:
-          node-version: '16'
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
           cache: 'npm'
       - run: npm ci
-      - run: |
-          npm run build
-  clean-run: # make sure the action works on a clean machine without building
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: ./
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-          cache: 'npm'
-      - run: npm ci
-      - name: Lint
+      - run: npm run all
+
+      - name: Check for changes
         run: |
-          npm run format-check
-          npm run lint
+          if [ "$(git diff --ignore-space-at-eol dist/ | wc -l)" -gt "0" ]; then
+            echo "changes_exist=false" >> $GITHUB_ENV
+          else
+            echo "changes_exist=true" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        if: ${{ env.changes_exist == 'true' }}
+        with:
+          commit_message: ':package: (core): update build files'

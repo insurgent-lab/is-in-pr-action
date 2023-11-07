@@ -1,32 +1,30 @@
 {
-  "name": "actiongetcurrentpr",
-  "version": "2.2.0",
-  "description": "Github Action for getting the current PR if the commit belongs to one",
-  "main": "lib/main.js",
+  "name": "is-pr-action",
+  "version": "0.1.0",
+  "description": "Github Action for checking if the current commit is part of a PR",
+  "main": "dist/main.js",
+  "author": "8BitJonny (https://github.com/8BitJonny)",
+  "maintainers": [
+    "Pierre Cavin <me@sherlox.io> (https://sherlox.io)"
+  ],
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insurgent-lab/is-pr-action.git"
+  },
+  "homepage": "https://github.com/insurgent-lab/is-pr-action#readme",
+  "bugs": {
+    "url": "https://github.com/insurgent-lab/is-pr-action/issues"
+  },
   "scripts": {
-    "build": "tsc",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
-    "package": "ncc build --source-map --license licenses.txt",
+    "lint:fix": "npm run lint -- --fix",
+    "package": "ncc build src/main.ts --source-map --license licenses.txt",
     "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+    "all": "npm run format && npm run lint:fix && npm test && npm run package"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/8BitJonny/gh-get-current-pr.git"
-  },
-  "keywords": [
-    "Github",
-    "Action",
-    "Javascript"
-  ],
-  "author": "8BitJonny",
-  "license": "SEE LICENSE IN LICENSE file",
-  "bugs": {
-    "url": "https://github.com/8BitJonny/gh-get-current-pr/issues"
-  },
-  "homepage": "https://github.com/8BitJonny/gh-get-current-pr#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1"
@@ -43,5 +41,10 @@
     "prettier": "2.8.8",
     "ts-jest": "^27.1.4",
     "typescript": "^4.9.5"
-  }
+  },
+  "keywords": [
+    "Github",
+    "Action",
+    "Javascript"
+  ]
 }

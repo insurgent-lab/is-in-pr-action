@@ -1,8 +1,8 @@
 import {getInput} from '@actions/core'
 
-export default function getInputBool(
+export default function getBooleanInput(
   name: string,
-  defaultValue = false
+  defaultValue: boolean
 ): boolean {
   const param = getInput(name)
   if (param === 'true' || param === '1') {

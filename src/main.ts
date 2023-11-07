@@ -1,24 +1,28 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
+import getCommitPRs from './adapter/get-commit-prs'
 import getInputs from './io/get-inputs'
-import getLastPullRequest from './get-last-pr'
-import getPRsAssociatedWithCommit from './adapter/get-prs-associated-with-commit'
-import setOutput from './io/set-output'
+import isCommitInFilteredPRs from './is-commit-in-filtered-prs'
 
 async function main(): Promise<void> {
   try {
-    const {token, sha, filterOutClosed, filterOutDraft} = getInputs()
+    const {token, sha, includeDraft} = getInputs()
+
+    core.info(`Running sha: ${sha}, includeDraft: ${includeDraft}.`)
 
     const octokit = github.getOctokit(token)
-    const allPRs = await getPRsAssociatedWithCommit(octokit, sha)
+    const allPRs = await getCommitPRs(octokit, sha)
 
-    const pr = getLastPullRequest(allPRs, {
-      draft: !filterOutDraft,
-      closed: !filterOutClosed,
-      preferWithHeadSha: sha
+    const result = isCommitInFilteredPRs(allPRs, {
+      includeDraft
     })
 
-    setOutput(pr)
+    core.info(
+      `Commit "${sha}" is${
+        !result ? ' not' : ''
+      } part of a PR matching the requirements.`
+    )
+    core.setOutput('result', result)
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }

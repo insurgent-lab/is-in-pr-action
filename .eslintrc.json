@@ -10,7 +10,19 @@
   "parserOptions": {
     "ecmaVersion": 9,
     "sourceType": "module",
-    "project": ["./tsconfig.json", "./__tests__/tsconfig.json"]
+    "project": ["./tsconfig.json"]
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
   },
   "rules": {
     "i18n-text/no-en": "off",
@@ -51,17 +63,5 @@
     "@typescript-eslint/semi": ["error", "never"],
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/unbound-method": "error"
-  },
-  "env": {
-    "node": true,
-    "es6": true
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src/"]
-      }
-    }
   }
 }
