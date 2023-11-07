@@ -1,7 +1,7 @@
 import {expect, test} from '@jest/globals'
 // @ts-ignore
-import createDummyPR from './create-dummy-pr'
 import getLastPullRequest from '../src/get-last-pr'
+import createDummyPR from './create-dummy-pr'
 
 test('prefers PR with commit as head SHA', () => {
   const testPRs = [
@@ -25,6 +25,6 @@ test('filter out draft PRs', () => {
 test('find a draft PRs', () => {
   const testPRs = [createDummyPR(11, {draft: true})]
 
-  const foundPR = getLastPullRequest(testPRs, {draft: true}) || {id: null}
+  const foundPR = getLastPullRequest(testPRs, {draft: true}) ?? {id: null}
   expect(foundPR.id).toBe(testPRs[0].id)
 })

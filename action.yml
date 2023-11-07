@@ -1,6 +1,5 @@
-name: Get Current Pull Request
-author: 8BitJonny
-description: Get the PR associated with the current commit.
+name: Is PR?
+description: Checks if the current commit is part of a PR.
 inputs:
   github-token:
     description: The GitHub token used to create an authenticated client.
@@ -17,28 +16,10 @@ inputs:
     required: false
 outputs:
   pr_found:
-    description: The outcome if a PR has been found. If so, the other outputs are set.
-  pr:
-    description: The whole PR object if one was found.
-  number:
-    description: The PR number if one was found.
-  pr_title:
-    description: The PR Title if one was found.
-  pr_body:
-    description: The PR Body if one was found.
-  pr_url:
-    description: The PR Url if one was found.
-  pr_created_at:
-    description: The PR Created timestamp if one was found.
-  pr_merged_at:
-    description: The PR Merged timestamp if one was found.
-  pr_closed_at:
-    description: The PR Closed timestamp if one was found.
-  pr_labels:
-    description: The PR Labels if any was found.
+    description: Boolean indicating if the commit is part of a PR.
 runs:
   using: node16
   main: 'dist/index.js'
 branding:
   icon: git-pull-request
-  color: green
+  color: purple
