@@ -21,3 +21,19 @@ jobs:
       - run: npm run format-check
       - run: npm run lint
       - run: npm test
+  run-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+      - run: npm ci
+      - name: Build Action
+        run: |
+          npm run build
+          npm run package
+      - name: Run Action
+        uses: ./
+        id: pr
