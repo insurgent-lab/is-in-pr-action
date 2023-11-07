@@ -1,7 +1,7 @@
 [![Version](https://img.shields.io/github/v/release/insurgent-lab/is-pr-action.svg?display_name=tag&sort=semver)](https://github.com/insurgent-lab/is-pr-action/releases)
 [![Build Status](https://github.com/insurgent-lab/is-pr-action/actions/workflows/build.yml/badge.svg)](https://github.com/insurgent-lab/is-pr-action/actions/workflows/build.yml)
 [![Test Status](https://github.com/insurgent-lab/is-pr-action/actions/workflows/test.yml/badge.svg)](https://github.com/insurgent-lab/is-pr-action/actions/workflows/test.yml)
-[![License](https://img.shields.io/github/license/insurgent-lab/is-pr-action.sv)](https://github.com/insurgent-lab/is-pr-action/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/insurgent-lab/is-pr-action.svg)](https://github.com/insurgent-lab/is-pr-action/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 # Github Action: Is PR?
