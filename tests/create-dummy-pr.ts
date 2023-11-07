@@ -6,11 +6,11 @@ interface Options {
 }
 
 export default function createDummyPR(id: number, options: Options): PR {
-  return Object.assign({} as PR, {
+  return {
     id,
     draft: options.draft ?? false,
     head: {
       sha: options.sha ?? ''
-    }
-  })
+    } as PR['head']
+  } as PR
 }
