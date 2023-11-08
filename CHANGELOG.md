@@ -1,4 +1,12 @@
+## [0.1.1](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.0...v0.1.1) (2023-11-08)
+
+
+### 🐛 Bug Fixes
+
+- display PR number instead of id ([#2](https://github.com/insurgent-lab/is-in-pr-action/issues/2)) ([9e21841](https://github.com/insurgent-lab/is-in-pr-action/commit/9e21841900b499cc621786b68e581707964ea08e))
+
 ## [0.1.0](https://github.com/insurgent-lab/is-in-pr-action/compare/1a191fcc60515c65a9bf978ec1996d2d07f52599...v0.1.0) (2023-11-08)
+
 
 ### ✨ Features
 

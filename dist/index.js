@@ -9596,7 +9596,7 @@ const DEFAULTS = {
 };
 function getPrsIdsString(pullRequests) {
     return pullRequests.length
-        ? pullRequests.map(pr => `#${pr.id}`).join(', ')
+        ? pullRequests.map(pr => `#${pr.number}`).join(', ')
         : 'none';
 }
 function isCommitInFilteredPRs(pullRequests, options) {
