@@ -20,7 +20,7 @@ This action enables you to know if the commit is part of an open PR no matter wh
 
 ```yml
 steps:
-  - uses: insurgent-lab/is-in-pr-action@0.1.1
+  - uses: insurgent-lab/is-in-pr-action@v0.1.1
     id: isPR
 
   - run: echo "This commit is part of a PR!"
@@ -31,7 +31,7 @@ steps:
 
 ```yml
 steps:
-  - uses: insurgent-lab/is-in-pr-action@0.1.1
+  - uses: insurgent-lab/is-in-pr-action@v0.1.1
     id: isPR
     with:
       # Include draft PRs. (default: true)
