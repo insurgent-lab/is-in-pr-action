@@ -1,4 +1,4 @@
-name: Is PR?
+name: Is in PR?
 description: Checks if the current commit is part of a PR.
 inputs:
   includeDraft:

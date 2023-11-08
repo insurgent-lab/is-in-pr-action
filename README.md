@@ -1,10 +1,10 @@
-[![Version](https://img.shields.io/github/v/release/insurgent-lab/is-pr-action.svg?display_name=tag&sort=semver)](https://github.com/insurgent-lab/is-pr-action/releases)
-[![Build Status](https://github.com/insurgent-lab/is-pr-action/actions/workflows/build.yml/badge.svg)](https://github.com/insurgent-lab/is-pr-action/actions/workflows/build.yml)
-[![Test Status](https://github.com/insurgent-lab/is-pr-action/actions/workflows/test.yml/badge.svg)](https://github.com/insurgent-lab/is-pr-action/actions/workflows/test.yml)
-[![License](https://img.shields.io/github/license/insurgent-lab/is-pr-action.svg)](https://github.com/insurgent-lab/is-pr-action/blob/main/LICENSE)
+[![Version](https://img.shields.io/github/v/release/insurgent-lab/is-in-pr-action.svg?display_name=tag&sort=semver)](https://github.com/insurgent-lab/is-in-pr-action/releases)
+[![Build Status](https://github.com/insurgent-lab/is-in-pr-action/actions/workflows/build.yml/badge.svg)](https://github.com/insurgent-lab/is-in-pr-action/actions/workflows/build.yml)
+[![Test Status](https://github.com/insurgent-lab/is-in-pr-action/actions/workflows/test.yml/badge.svg)](https://github.com/insurgent-lab/is-in-pr-action/actions/workflows/test.yml)
+[![License](https://img.shields.io/github/license/insurgent-lab/is-in-pr-action.svg)](https://github.com/insurgent-lab/is-in-pr-action/blob/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-# Github Action: Is PR?
+# Github Action: Is in PR?
 
 Github Action for checking if the current commit belongs to an open pull request.
 
@@ -20,7 +20,7 @@ This action enables you to know if the commit is part of an open PR no matter wh
 
 ```yml
 steps:
-  - uses: insurgent-lab/is-pr-action@0.1.0
+  - uses: insurgent-lab/is-in-pr-action@0.1.0
     id: isPR
 
   - run: echo "This commit is part of a PR!"
@@ -31,7 +31,7 @@ steps:
 
 ```yml
 steps:
-  - uses: insurgent-lab/is-pr-action@0.1.0
+  - uses: insurgent-lab/is-in-pr-action@0.1.0
     id: isPR
     with:
       # Include draft PRs. (default: true)

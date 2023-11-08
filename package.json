@@ -1,5 +1,5 @@
 {
-  "name": "is-pr-action",
+  "name": "is-in-pr-action",
   "version": "0.1.0",
   "description": "Github Action for checking if the current commit is part of a PR",
   "main": "dist/main.js",
@@ -10,11 +10,11 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/insurgent-lab/is-pr-action.git"
+    "url": "git+https://github.com/insurgent-lab/is-in-pr-action.git"
   },
-  "homepage": "https://github.com/insurgent-lab/is-pr-action#readme",
+  "homepage": "https://github.com/insurgent-lab/is-in-pr-action#readme",
   "bugs": {
-    "url": "https://github.com/insurgent-lab/is-pr-action/issues"
+    "url": "https://github.com/insurgent-lab/is-in-pr-action/issues"
   },
   "scripts": {
     "format": "prettier --write '**/*.ts'",
