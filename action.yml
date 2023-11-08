@@ -6,7 +6,7 @@ inputs:
     default: 'true'
   sha:
     description: Commit SHA to check for. Defaults to head SHA.
-    default: ${{ github.event.pull_request.head.sha || github.context.sha }}
+    default: ${{ github.event.pull_request.head.sha || github.sha }}
   github-token:
     description: The GitHub token used to create an authenticated client.
     default: ${{ github.token }}
