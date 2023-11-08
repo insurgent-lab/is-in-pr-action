@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.2...v0.1.3) (2023-11-08)
+
+
+### 🐛 Bug Fixes
+
+* fix default sha value ([26b3986](https://github.com/insurgent-lab/is-in-pr-action/commit/26b39860439d7ffb2792b8b199a5733342f54b18))
+
 ## [0.1.2](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.1...v0.1.2) (2023-11-08)
 
 
