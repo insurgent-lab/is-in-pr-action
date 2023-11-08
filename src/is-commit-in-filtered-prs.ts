@@ -11,7 +11,7 @@ const DEFAULTS: Options = {
 
 function getPrsIdsString(pullRequests: PR[]): string {
   return pullRequests.length
-    ? pullRequests.map(pr => `#${pr.id}`).join(', ')
+    ? pullRequests.map(pr => `#${pr.number}`).join(', ')
     : 'none'
 }
 
