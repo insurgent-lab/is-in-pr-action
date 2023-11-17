@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.3...v0.1.4) (2023-11-17)
+
+
+### 📚 Documentation
+
+* **readme:** add "as separate job" and examples sections ([ef8dd96](https://github.com/insurgent-lab/is-in-pr-action/commit/ef8dd96de1a114337e4213c1007b9d71b6a4635e))
+
 ## [0.1.3](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.2...v0.1.3) (2023-11-08)
 
 
