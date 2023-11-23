@@ -23,9 +23,9 @@ export default function isCommitInFilteredPRs(
 
   core.info(`Commit in PRs (pre-filtering): ${getPrsIdsString(pullRequests)}`)
 
-  const filteredPRs = pullRequests.filter(
-    ({draft}) => !draft || !!options.includeDraft
-  )
+  const filteredPRs = pullRequests
+    .filter(({state}) => state === 'open')
+    .filter(({draft}) => !draft || !!options.includeDraft)
 
   core.info(`Commit in PRs (post-filtering): ${getPrsIdsString(filteredPRs)}`)
 
