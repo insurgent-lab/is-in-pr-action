@@ -1,6 +1,6 @@
 {
   "name": "is-in-pr-action",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Github Action for checking if the current commit is part of a PR",
   "main": "dist/main.js",
   "author": "8BitJonny (https://github.com/8BitJonny)",

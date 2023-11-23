@@ -1,3 +1,10 @@
+## [0.1.5](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.4...v0.1.5) (2023-11-23)
+
+
+### 🐛 Bug Fixes
+
+* filter out closed PRs ([#4](https://github.com/insurgent-lab/is-in-pr-action/issues/4)) ([2145b23](https://github.com/insurgent-lab/is-in-pr-action/commit/2145b2391c6565f4da2d77ac7633ff1c4010871d))
+
 ## [0.1.4](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.3...v0.1.4) (2023-11-17)
 
 
