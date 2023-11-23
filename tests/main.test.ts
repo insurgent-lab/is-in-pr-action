@@ -17,3 +17,10 @@ test('filter out draft PRs', () => {
   const foundPR = isCommitInFilteredPRs(testPRs, {includeDraft: false})
   expect(foundPR).toBe(false)
 })
+
+test('filter out closed PRs', () => {
+  const testPRs = [createDummyPR(1, {closed: true})]
+
+  const foundPR = isCommitInFilteredPRs(testPRs, {includeDraft: false})
+  expect(foundPR).toBe(false)
+})
