@@ -14,7 +14,7 @@ outputs:
   result:
     description: Boolean indicating if the commit is part of a PR.
 runs:
-  using: node16
+  using: node20
   main: 'dist/index.js'
 branding:
   icon: git-pull-request
