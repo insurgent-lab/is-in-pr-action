@@ -22,7 +22,7 @@ This action enables you to know if the commit is part of an open PR no matter wh
 
 ```yml
 steps:
-  - uses: insurgent-lab/is-in-pr-action@v0.1.5
+  - uses: insurgent-lab/is-in-pr-action@v0.2.0
     id: isInPR
 
   - run: echo "This commit is part of a PR!"
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: insurgent-lab/is-in-pr-action@v0.1.5
+      - uses: insurgent-lab/is-in-pr-action@v0.2.0
         id: isInPR
     outputs:
       result: ${{ steps.isInPR.outputs.result }}
@@ -61,7 +61,7 @@ jobs:
 
 ```yml
 steps:
-  - uses: insurgent-lab/is-in-pr-action@v0.1.5
+  - uses: insurgent-lab/is-in-pr-action@v0.2.0
     id: isPR
     with:
       # Include draft PRs. (default: true)
@@ -87,7 +87,7 @@ jobs:
   prevent-duplicate-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: insurgent-lab/is-in-pr-action@v0.1.5
+      - uses: insurgent-lab/is-in-pr-action@v0.2.0
         id: isInPR
     outputs:
       should-run: ${{ !(steps.isInPR.outputs.result == 'true' && github.event_name == 'push') }}

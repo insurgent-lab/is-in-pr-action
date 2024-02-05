@@ -1,3 +1,14 @@
+## [0.2.0](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.5...v0.2.0) (2024-02-05)
+
+
+### ⚠ Breaking changes
+
+* drop support for Node 16
+
+### ♻️ Chores
+
+* chore!: use Node 20 ([6c39a39](https://github.com/insurgent-lab/is-in-pr-action/commit/6c39a396e3b862d4b10ef66b90ff72177b52ca64))
+
 ## [0.1.5](https://github.com/insurgent-lab/is-in-pr-action/compare/v0.1.4...v0.1.5) (2023-11-23)
 
 
